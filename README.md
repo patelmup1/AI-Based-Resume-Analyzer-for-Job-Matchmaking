@@ -3,120 +3,106 @@
 
 ## 📌 Overview
 
-In today’s job market, candidates often submit generic resumes that don’t align well with specific job roles. Meanwhile, recruiters struggle with the time-consuming task of manually screening applications.
-
-This project provides an **AI-powered Resume Analyzer** that automates resume parsing, matches resumes with job descriptions, and offers **smart suggestions** to optimize hiring for both candidates and employers.
+In today's hiring landscape, job seekers often submit generic resumes, and recruiters spend hours filtering through applications manually. This project solves both problems with an **AI-based Resume Analyzer** that parses resumes, matches them against job descriptions, and provides **smart, LLM-generated feedback**.
 
 ---
 
 ## 🎯 Objectives
 
-- Parse and analyze resumes using NLP techniques
-- Match resume content against job descriptions using AI models
-- Generate a job-match score based on keyword and semantic relevance
-- Provide actionable suggestions for resume improvement using LLMs
+- Parse resumes to extract skills, experience, and education
+- Compare resume content with job descriptions using keyword & semantic similarity
+- Generate match score and missing skill gaps
+- Provide AI-generated improvement suggestions using LLMs (Mistral-7B)
 
 ---
 
-## 🧠 AI/ML Components Used
+## 🧠 AI/ML Components
 
-| Component              | Technology / Model                  | Purpose                                |
-|------------------------|-------------------------------------|----------------------------------------|
-| Resume Parsing         | `spaCy` (en_core_web_sm)            | Extract structured data from resumes   |
-| Keyword Matching       | `TF-IDF + Cosine Similarity`        | Measure keyword relevance              |
-| Semantic Matching      | `Sentence-BERT (all-MiniLM-L6-v2)`  | Understand context beyond keywords     |
-| Resume Suggestions     | `Mistral-7B-Instruct` (LLM)         | Generate personalized feedback         |
-| Experience Extraction  | Regex (upgradeable to ML)           | Detect mentions of experience duration |
-| Skill Extraction       | Rule-based (upgradeable to NER)     | Identify technical and soft skills     |
-| Visualization          | Streamlit / Plotly                  | Display insights & match score         |
-
----
-
-## 🧱 System Architecture
-
-```
-[ Resume Upload ] 
-       ↓
-[ NLP Parsing (spaCy) ]
-       ↓
-[ TF-IDF & BERT Matching ]
-       ↓
-[ LLM Feedback Generation ]
-       ↓
-[ Results Dashboard (Streamlit) ]
-```
+| Feature                 | Model / Technique                  | Purpose                                      |
+|------------------------|-------------------------------------|----------------------------------------------|
+| Resume Parsing         | spaCy                               | Extract structured data from resumes         |
+| Keyword Matching       | TF-IDF + Cosine Similarity          | Basic similarity scoring                     |
+| Semantic Matching      | Sentence-BERT (`MiniLM-L6-v2`)      | Deep contextual similarity                   |
+| Resume Suggestions     | Mistral-7B-Instruct (via HF)        | Generate personalized feedback               |
+| Experience Detection   | Regex + NLP                         | Identify experience gaps                     |
+| Skill Extraction       | Rule-based (NER upgradeable)        | Identify technical and soft skills           |
+| Visualization          | Streamlit / matplotlib / seaborn    | Display match score and analytics            |
 
 ---
 
-## 🚀 Tech Stack
-
-- **Language**: Python 3.10+
-- **NLP**: spaCy, Sentence-BERT (`sentence-transformers`)
-- **ML**: scikit-learn (TF-IDF, cosine similarity)
-- **LLM**: Mistral-7B-Instruct (via Hugging Face API)
-- **Frontend**: Streamlit or Flask (for UI)
-- **Deployment**: Heroku / AWS / GCP
-
----
-
-## 📥 Installation
-
-```bash
-git clone https://github.com/yourusername/resume-analyzer-ai.git
-cd resume-analyzer-ai
-pip install -r requirements.txt
-streamlit run app.py
-```
-
----
-
-## 📂 Folder Structure
+## 🧱 Project Structure
 
 ```
 resume-analyzer-ai/
-│
-├── data/                  # Sample resumes and job descriptions
-├── models/                # Model configs or embeddings
-├── utils/                 # Text parsing, match scoring, etc.
-├── app.py                 # Main application script
-├── requirements.txt       # Python dependencies
-└── README.md              # Project documentation
+├── notebooks/
+│   └── Resume_Analyzer_v2_Enhanced_Edition.ipynb   # Google Colab-compatible notebook
+├── src/
+│   └── resume_analyzer_v2_enhanced_edition.py      # Production-ready Python script
+├── screenshots/                                    # Output charts & results
+├── data/                                           # Sample resumes and job descriptions
+├── requirements.txt                                # Python dependencies
+└── README.md                                       # Project documentation
 ```
 
 ---
 
-## 📸 Example Output
+## 🚀 How to Run
 
-![output](./screenshots/sample-output.png)
+### 🔹 1. Clone the Repository
+```bash
+git clone https://github.com/yourusername/resume-analyzer-ai.git
+cd resume-analyzer-ai
+```
 
-- **Resume Parsed Output**
-- **Job Match Score** (e.g., 82%)
-- **AI Suggestions**:
-  - Add certifications like AWS or GCP
-  - Emphasize team/project experience
+### 🔹 2. (Option A) Run Notebook in Google Colab
+
+- Open: `notebooks/Resume_Analyzer_v2_Enhanced_Edition.ipynb`
+- Upload resumes via file upload cell
+- Enter job description in text block
+- View parsed results, match scores, charts, and suggestions
+
+### 🔹 3. (Option B) Run Script in Python Environment
+
+```bash
+pip install -r requirements.txt
+python src/resume_analyzer_v2_enhanced_edition.py
+```
+
+> ⚠️ Ensure you add your Hugging Face token for LLM features.
 
 ---
 
-## 🔮 Future Scope
+## 📸 Sample Output
 
-- Integrate custom NER model for dynamic skill extraction
-- Add support for multilingual resumes
-- Improve scoring logic with learning-based feedback loops
-- Resume builder with real-time AI feedback
-- Connect with job boards (e.g., LinkedIn, Indeed)
+![Example](./screenshots/sample-output.png)
+
+- Parsed resume data
+- Match Score (TF-IDF + BERT)
+- Missing Skills and Experience Gap
+- AI Suggestions (e.g., “Highlight AWS experience”)
+
+---
+
+## 🔮 Future Enhancements
+
+- Train a custom NER model for dynamic skill extraction
+- Multilingual support for global applicants
+- Resume editor with live AI feedback
+- Integration with LinkedIn / Indeed APIs
+- Add fairness & bias detection for recruiter use
+
+---
+
+## 📚 References
+
+- [spaCy](https://spacy.io)
+- [Hugging Face Transformers](https://huggingface.co)
+- [Sentence-BERT](https://www.sbert.net/)
+- [Mistral AI](https://huggingface.co/mistralai)
+- [scikit-learn](https://scikit-learn.org/)
 
 ---
 
 ## 📃 License
 
 This project is licensed under the MIT License.
-
----
-
-## 🙌 Acknowledgements
-
-- [spaCy](https://spacy.io)
-- [Hugging Face Transformers](https://huggingface.co)
-- [Sentence-BERT](https://www.sbert.net/)
-- [scikit-learn](https://scikit-learn.org/)
-- [Mistral AI](https://huggingface.co/mistralai)

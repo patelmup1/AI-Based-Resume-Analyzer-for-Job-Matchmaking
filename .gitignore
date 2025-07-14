@@ -1,0 +1,51 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Virtual environments
+.env/
+.venv/
+env/
+venv/
+ENV/
+
+# VSCode settings
+.vscode/
+
+# macOS system files
+.DS_Store
+
+# Output files
+*.log
+*.csv
+*.tsv
+*.out
+*.pdf
+*.png
+
+# Uploaded resume files (user data)
+resumes/
+uploads/
+
+# Streamlit cache
+.streamlit/
+
+# Token or secret files
+*.env
+token.txt
+
+# Google Colab artifacts
+drive/
+sample_data/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
