@@ -50,7 +50,7 @@ resume-analyzer-ai/
 
 ### 🔹 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/resume-analyzer-ai.git
+git clone https://github.com/patelmup1/resume-analyzer-ai.git
 cd resume-analyzer-ai
 ```
 
@@ -74,7 +74,7 @@ python src/resume_analyzer_v2_enhanced_edition.py
 
 ## 📸 Sample Output
 
-![Example](./screenshots/sample-output.png)
+!(./screenshot,example/resume_match_scores.png)
 
 - Parsed resume data
 - Match Score (TF-IDF + BERT)
