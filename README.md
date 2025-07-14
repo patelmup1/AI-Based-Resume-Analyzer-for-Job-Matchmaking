@@ -74,7 +74,7 @@ python src/resume_analyzer_v2_enhanced_edition.py
 
 ## 📸 Sample Output
 
-!(./screenshot,example/resume_match_scores.png)
+![Output][https://github.com/patelmup1/AI-Based-Resume-Analyzer-for-Job-Matchmaking/blob/68870e57f7d2e8d18b796fba5964554029e26ec6/screenshots%2Cexample/resume_match_scores.png]
 
 - Parsed resume data
 - Match Score (TF-IDF + BERT)
