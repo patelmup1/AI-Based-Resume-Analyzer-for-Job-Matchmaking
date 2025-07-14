@@ -1,0 +1,22 @@
+Ravi Sharma
+Email: ravi.sharma@example.com
+Phone: +91-9001234567
+
+Summary:
+Full-stack software engineer with 4+ years of experience in React, Node.js, and MongoDB. Led frontend architecture for multiple web apps.
+
+Skills:
+- JavaScript, TypeScript
+- React, Redux
+- Node.js, Express.js
+- MongoDB, PostgreSQL
+- Docker, Git
+
+Experience:
+Software Engineer – CodeCraft Ltd. (2021–Present)
+- Developed internal dashboard used by 500+ employees.
+- Implemented REST APIs with Express.js.
+- Deployed microservices with Docker on AWS EC2.
+
+Education:
+B.Tech – Computer Science – NIT Surat (2016–2020)

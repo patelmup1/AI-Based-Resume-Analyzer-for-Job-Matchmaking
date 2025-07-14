@@ -1,0 +1,22 @@
+Priya Desai
+Email: priya.desai@example.com
+Phone: +91-9800123412
+
+Summary:
+Marketing Manager with 8 years of experience in B2B campaigns, brand strategy, and performance analytics.
+
+Skills:
+- Digital Marketing
+- SEO/SEM
+- Google Ads, Meta Ads
+- Marketing Automation (HubSpot)
+- Analytics (GA4, Looker)
+
+Experience:
+Senior Marketing Manager – Zenix Corp (2018–Present)
+- Managed $500K ad budget across platforms.
+- Led rebranding campaign that increased lead gen by 30%.
+- Built marketing dashboards using Google Looker Studio.
+
+Education:
+MBA – Marketing – IIM Ahmedabad (2014–2016)

@@ -1,0 +1,22 @@
+John Patel
+Email: john.patel@example.com
+Phone: +91-9876543210
+
+Summary:
+Detail-oriented Data Analyst with 1.5 years of experience in SQL and Excel. Passionate about turning data into actionable insights.
+
+Skills:
+- SQL
+- MS Excel
+- Google Sheets
+- Tableau (Beginner)
+- Python (Basic)
+
+Experience:
+Data Analyst Intern – DataWiz Analytics (Jan 2023 – Jun 2024)
+- Cleaned and transformed raw sales data using Excel.
+- Wrote SQL queries to retrieve customer data from MySQL database.
+- Built visual dashboards for monthly reporting.
+
+Education:
+B.Sc. in Statistics – Gujarat University (2019–2022)

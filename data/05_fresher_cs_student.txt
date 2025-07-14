@@ -1,0 +1,20 @@
+Rahul Joshi
+Email: rahul.joshi@example.com
+Phone: +91-9988776655
+
+Summary:
+Final-year Computer Science student passionate about building real-world software applications. Open to internships and junior roles.
+
+Skills:
+- C++, Python
+- HTML, CSS, JavaScript
+- Git, GitHub
+- SQL (Basic)
+- Data Structures & Algorithms
+
+Projects:
+- Portfolio Website: Built using HTML/CSS and deployed on GitHub Pages.
+- Attendance Tracker: Python + SQLite app for college admin.
+
+Education:
+B.E. – Computer Engineering – LD College of Engineering (2021–Present)

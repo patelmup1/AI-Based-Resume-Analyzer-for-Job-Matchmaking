@@ -1,0 +1,22 @@
+Anjali Verma
+Email: anjali.verma@example.com
+Phone: +91-8123456677
+
+Summary:
+Creative UX/UI Designer with 3 years of experience crafting user-first designs for mobile and web platforms.
+
+Skills:
+- Figma, Adobe XD
+- User Research
+- Wireframing & Prototyping
+- Design Systems
+- HTML/CSS (Basic)
+
+Experience:
+UX Designer – AppWave Studios (2022–Present)
+- Designed mobile banking app interface used by 1M+ users.
+- Conducted usability testing with 20+ participants.
+- Created UI kits and icon sets for cross-team use.
+
+Education:
+B.Des. – NID Ahmedabad (2017–2021)
