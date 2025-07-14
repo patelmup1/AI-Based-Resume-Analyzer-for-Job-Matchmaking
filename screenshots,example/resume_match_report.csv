@@ -1,0 +1,6 @@
+overall_score,keyword_score,semantic_score,matched_skills,missing_skills,experience_gap,resume_skills,job_skills,filename,llm_suggestion
+21.93,10.17,33.69,,"Machine learning, Cloud computing, Python",0,,"Python, Machine learning, Cloud computing",04_ux_designer.txt,Could not generate suggestion.
+30.16,7.98,52.33,Python,"Machine learning, Cloud computing",0,"Python, Sql","Python, Machine learning, Cloud computing",05_fresher_cs_student.txt,Could not generate suggestion.
+26.07,14.96,37.19,,"Machine learning, Cloud computing, Python",0,Docker,"Python, Machine learning, Cloud computing",02_midlevel_software_engineer.txt,Could not generate suggestion.
+26.37,10.45,42.29,Python,"Machine learning, Cloud computing",0,"Python, Sql","Python, Machine learning, Cloud computing",01_junior_data_analyst.txt,Could not generate suggestion.
+20.58,6.85,34.3,,"Machine learning, Cloud computing, Python",0,,"Python, Machine learning, Cloud computing",03_senior_marketing_manager.txt,Could not generate suggestion.
