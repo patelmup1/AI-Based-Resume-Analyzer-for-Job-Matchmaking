@@ -35,8 +35,10 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sentence_transformers import SentenceTransformer, util
 from huggingface_hub import InferenceClient
 
-# Replace 'your_token_here' with your actual HF token
-hf_token = "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"
+# Read the token at runtime; never commit credentials.
+import os
+from getpass import getpass
+hf_token = os.environ.get("HF_TOKEN") or getpass("Hugging Face token (hidden): ")
 client = InferenceClient(model="mistralai/Mistral-7B-Instruct-v0.2", token=hf_token)
 
 def extract_text_from_resume(file_path):
