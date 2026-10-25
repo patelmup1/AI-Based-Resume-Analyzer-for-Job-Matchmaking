@@ -1,108 +1,61 @@
+# AI Resume Analyzer & Job Matchmaking
 
-# 🤖 AI-Powered Resume Analyzer & Job Matchmaking System
+A Google Colab project that compares resumes with a job description using keyword and semantic similarity, identifies skill gaps, and requests resume suggestions from a Hugging Face language model.
 
-## 📌 Overview
+## What it does
 
-In today's hiring landscape, job seekers often submit generic resumes, and recruiters spend hours filtering through applications manually. This project solves both problems with an **AI-based Resume Analyzer** that parses resumes, matches them against job descriptions, and provides **smart, LLM-generated feedback**.
+- Extracts text from PDF, Word, and plain-text resumes
+- Computes TF-IDF and Sentence Transformer similarity scores
+- Finds matched and missing skills using a predefined skill list
+- Estimates experience gaps with regular expressions
+- Generates optional LLM suggestions
+- Exports a CSV report and a comparison chart to Google Drive
 
----
+The scores are heuristic comparisons, not validated measures of candidate suitability. Review results manually.
 
-## 🎯 Objectives
+## Technology
 
-- Parse resumes to extract skills, experience, and education
-- Compare resume content with job descriptions using keyword & semantic similarity
-- Generate match score and missing skill gaps
-- Provide AI-generated improvement suggestions using LLMs (Mistral-7B)
+Python, scikit-learn, Sentence Transformers (`all-MiniLM-L6-v2`), PyPDF2, textract, pandas, matplotlib, seaborn, and Hugging Face inference.
 
----
+## Run in Google Colab
 
-## 🧠 AI/ML Components
+1. Open [the notebook](notebook/Resume_Analyzer_v2_Enhanced_Edition.ipynb) in Google Colab.
+2. Run the installation cells and mount Google Drive when prompted.
+3. Supply your own Hugging Face access token through the `HF_TOKEN` environment variable or the hidden prompt. Never save it in a notebook cell.
+4. Upload sample resumes and edit the job-description text.
+5. Run the analysis cells to view scores and export results.
 
-| Feature                 | Model / Technique                  | Purpose                                      |
-|------------------------|-------------------------------------|----------------------------------------------|
-| Resume Parsing         | spaCy                               | Extract structured data from resumes         |
-| Keyword Matching       | TF-IDF + Cosine Similarity          | Basic similarity scoring                     |
-| Semantic Matching      | Sentence-BERT (`MiniLM-L6-v2`)      | Deep contextual similarity                   |
-| Resume Suggestions     | Mistral-7B-Instruct (via HF)        | Generate personalized feedback               |
-| Experience Detection   | Regex + NLP                         | Identify experience gaps                     |
-| Skill Extraction       | Rule-based (NER upgradeable)        | Identify technical and soft skills           |
-| Visualization          | Streamlit / matplotlib / seaborn    | Display match score and analytics            |
+The model endpoint requires suitable access and availability on Hugging Face. Suggestions may be unavailable if the endpoint or token cannot be used.
 
----
-
-## 🧱 Project Structure
-
-```
-resume-analyzer-ai/
-├── notebooks/
-│   └── Resume_Analyzer_v2_Enhanced_Edition.ipynb   # Google Colab-compatible notebook
-├── src/
-│   └── resume_analyzer_v2_enhanced_edition.py      # Production-ready Python script
-├── screenshots/                                    # Output charts & results
-├── data/                                           # Sample resumes and job descriptions
-├── requirements.txt                                # Python dependencies
-└── README.md                                       # Project documentation
-```
-
----
-
-## 🚀 How to Run
-
-### 🔹 1. Clone the Repository
-```bash
-git clone https://github.com/patelmup1/resume-analyzer-ai.git
-cd resume-analyzer-ai
-```
-
-### 🔹 2. (Option A) Run Notebook in Google Colab
-
-- Open: `notebooks/Resume_Analyzer_v2_Enhanced_Edition.ipynb`
-- Upload resumes via file upload cell
-- Enter job description in text block
-- View parsed results, match scores, charts, and suggestions
-
-### 🔹 3. (Option B) Run Script in Python Environment
+## Clone the repository
 
 ```bash
-pip install -r requirements.txt
-python src/resume_analyzer_v2_enhanced_edition.py
+git clone https://github.com/patelmup1/AI-Based-Resume-Analyzer-for-Job-Matchmaking.git
+cd AI-Based-Resume-Analyzer-for-Job-Matchmaking
 ```
 
-> ⚠️ Ensure you add your Hugging Face token for LLM features.
+## Repository guide
 
----
+- [notebook/Resume_Analyzer_v2_Enhanced_Edition.ipynb](notebook/Resume_Analyzer_v2_Enhanced_Edition.ipynb): Colab notebook
+- [src/resume_analyzer_v2_enhanced_edition.py](src/resume_analyzer_v2_enhanced_edition.py): exported Colab source
+- [data](data): sample resume text files
+- [screenshots,example](screenshots,example): example reports and charts
+- [requirements.txt](requirements.txt): dependency list
 
-## 📸 Sample Output
+The exported Python file contains Colab/IPython shell commands and Google Drive integrations. It cannot currently be run directly with `python src/resume_analyzer_v2_enhanced_edition.py`. The pinned requirements are not a verified standalone installation path.
 
-![Output](https://github.com/patelmup1/AI-Based-Resume-Analyzer-for-Job-Matchmaking/blob/9175c583e4302bbe129470abf39ad54beb737a77/screenshots%2Cexample/resume_match_scores.jpg)
+## Example output
 
-- Parsed resume data
-- Match Score (TF-IDF + BERT)
-- Missing Skills and Experience Gap
-- AI Suggestions (e.g., “Highlight AWS experience”)
+![Example resume match scores](screenshots,example/resume_match_scores.png)
 
----
+## Data and credentials
 
-## 🔮 Future Enhancements
+Use sample or consented resumes. LLM suggestions transmit resume excerpts and the job description to the configured inference service. A previously committed Hugging Face token must be revoked by the owner; removing it from the current source does not remove it from Git history.
 
-- Train a custom NER model for dynamic skill extraction
-- Multilingual support for global applicants
-- Resume editor with live AI feedback
-- Integration with LinkedIn / Indeed APIs
-- Add fairness & bias detection for recruiter use
+## Feedback
 
----
+Report bugs through [GitHub Issues](https://github.com/patelmup1/AI-Based-Resume-Analyzer-for-Job-Matchmaking/issues).
 
-## 📚 References
+## License
 
-- [spaCy](https://spacy.io)
-- [Hugging Face Transformers](https://huggingface.co)
-- [Sentence-BERT](https://www.sbert.net/)
-- [Mistral AI](https://huggingface.co/mistralai)
-- [scikit-learn](https://scikit-learn.org/)
-
----
-
-## 📃 License
-
-This project is licensed under the MIT License.
+No LICENSE file is currently included in this repository. Licensing terms need to be specified by the maintainer.
